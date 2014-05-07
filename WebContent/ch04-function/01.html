@@ -19,7 +19,40 @@
 	}
 	//함수 호출
 	check2('사과');
-
+	
+	document.write('<br>인자 있는 함수 호출하여 연산된 값 반환 ================<br>');
+	function check3(num){
+		return num * num;
+	}
+	//함수 호출
+	var number = check3(10);
+	document.write('number = ' + number + '<br>');
+	
+	//익명 함수: 함수명이 없으며 함수를 변수명인 것 처럼 사용하는 기법
+	document.write('<br>익명 함수 ================<br>');
+	var fruit1 = function (){
+		document.write('과일을 좋아합니다~<br>');
+	};
+	//함수 호출
+	fruit1();
+	
+	document.write('<br>익명 함수 매개변수 대입 ================<br>');
+	var fruit2 = function(item){
+		document.write(item + '을 너무 좋아합니다~<br>');
+	};
+	//함수 호출
+	fruit2('파인애플');
+	
+	document.write('<br>익명 함수 매개변수 전달 후 반환되는 값 출력 ================<br>');
+	var fruit3 = function(x, y){
+		return x + y;
+	};
+	//함수호출
+	var result = fruit3(3, 7);
+	document.write('result = ' + result +'<br>');
+	
+	
+	
 </script>
 </head>
 <body>

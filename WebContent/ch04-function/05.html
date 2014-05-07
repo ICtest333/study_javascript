@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선언적 함수를 매개변수로 받는 함수</title>
+<script type="text/javascript">
+
+/* callFunctionTenTimes() 한번 호출해서 justFunction()을 10번 호출 
+ */
+	/**
+	* 함수를 열번 호출하는 함수
+	*/
+	function callFunctionTenTimes(otherFunction){
+		for(var i=0; i<7; i++){
+			//매개변수로 전달된 함수를 호출
+			otherFunction();
+		}
+	}
+	
+	function justFunction(){
+		document.write('Hello JavaScript!!! <br>');
+	}
+	
+	//함수 호출
+	callFunctionTenTimes(justFunction);
+	
+	//callFunctionTenTimes(justFunction());
+	//이런식으로 코드를 작성하면 매개변수로 함수를 전달하는 것이 아니라 함수를 1회 실행되는 것을 의미함으로
+	//따라서 전달되는 함수가 없기 때문에 함수가 한번 실행된 후 오류가 발생함
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

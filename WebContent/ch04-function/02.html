@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선언적 함수 vs 익명 함수</title>
+<script type="text/javascript">
+	//javascript는 동일한 함수명 사용가능
+	//동일한 함수명 사용시 에러 나지 않음
+	//마지막에 호출된 함수가 수행됨
+	document.write('선언적 함수: 동일한 함수명 사용가능 ===========<br>');
+	function aaa(){
+		document.write('함수1 aaa<br>');		
+	}
+	function aaa(){
+		document.write('함수2 aaa<br>');		
+	}
+	//함수 호출
+	aaa();
+	
+	
+	document.write('<br>선언적 함수: 함수 선언 전에 호출 ===========<br>');
+	//선언적 함수를 사용할 경우는 호출문이 먼저 나와도 에러없이 처리됨
+	//함수 호출
+	bbb();
+	function bbb(){
+		document.write('함수 bbb<br>');
+	}
+	
+	document.write('<br>익명함수: 동일 함수명 사용===========<br>');
+	var ccc = function(){
+		document.write('함수1 ccc <br>');
+	};
+	var ccc = function(){
+		document.write('함수2 ccc <br>');
+	};
+	//함수 호출
+	ccc();
+	
+	
+	document.write('<br>익명함수: 함수 선언 전에 호출 ===========<br>');
+	//선언적 함수를 사용할 경우는 호출문이 먼저 나와도 에러없이 처리됨
+	//익명 함수를 사용할 경우는 호출문이 함수 선언이후에 호출되어야 에러가 발생하지 않음
+	//함수 호출	
+	//ddd();	//오류 발생
+	var ddd = function(){
+		document.write('함수 ddd <br>');
+	};	
+	
+	
+	
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

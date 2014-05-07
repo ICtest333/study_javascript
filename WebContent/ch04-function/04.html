@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>return</title>
+<script type="text/javascript">
+/* 	function returnTest(){
+		document.write('문장 A' + '<br>');
+		document.write('문장 B' + '<br>');		
+	}
+	//함수 호출
+	 returnTest(); */
+	
+	
+	 function returnTest(){
+			document.write('문장 A' + '<br>');
+			//함수를 호출한 곳으로 되돌아 감
+			//함수가 종료됨
+			//return문 아래 코드는 수행되지 않음
+			return;	
+			
+			document.write('문장 B' + '<br>');		
+	}
+	//함수 호출
+	returnTest();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

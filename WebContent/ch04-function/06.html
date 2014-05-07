@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명함수를 매개변수로 받는 함수</title>
+<script type="text/javascript">
+
+/* callFunctionTenTimes() 한번 호출해서 justFunction()을 7번 호출 
+ */
+	/**
+	* 함수를 열번 호출하는 함수
+	*/
+	function callFunctionTenTimes(otherFunction){
+		for(var i=0; i<7; i++){
+			//매개변수로 전달된 함수를 호출
+			otherFunction();
+		}
+	}	
+	
+	//함수 호출 (전달할 함수를 익명함수 형태로 기재)	
+	callFunctionTenTimes(function(){
+		document.write('Hello JavaScript World!!! <br>');
+	});
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
