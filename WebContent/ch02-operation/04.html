@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3항(조건) 연산자</title>
+<script type="text/javascript">
+//자바에서 사용하고 있는 삼항연산자 지원
+	document.write('자바에서 사용하고 있는 삼항연산자 지원<br>');
+	var year = '2020년';
+				//조건식	? 	참값	:	거짓값;
+	var today = (year=='2020년')? '2020년입니다.':'2020년이 아닙니다.';
+	document.write(today);
+	document.write('<br>');document.write('<br>');
+	
+//자바에서 사용되지 않는 삼항연산자 지원
+document.write('자바에서 사용되지 않는 삼항연산자 지원<br>');
+var temp1 = 5, temp2 = 10;
+var max, min;
+//조건식		?	참일경우 실행되는 코드	:	거짓일경우 실행되는 코드
+temp1>=temp2 ? (max=temp1, min=temp2) : (max=temp2, min=temp1);
+document.write('큰값= ' + max + '<br>');
+document.write('작은값= ' + min + '<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

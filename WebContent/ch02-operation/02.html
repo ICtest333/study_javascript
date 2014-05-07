@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비교 연산자</title>
+<script type="text/javascript">
+/* 자바에 없는 비교 연산자
+ 연산자	설명
+ ===	양 변의 자료형과 값이 일치 여부
+ !==	양 변의 자료형과 값이 다른지 여부
+ */
+ 
+	var a = 20, b='20', c;
+	//값만 일치 여부 확인	
+	c = a == b;	
+	document.write('a == b: ' + c + '<br>');
+	
+	//값과 자료형 모두 확인
+	c = a === b;	
+	document.write('a === b: ' + c + '<br>');
+	
+	//값만 다른지 여부 확인
+	c = a != b;	
+	document.write('a != b: ' + c + '<br>');
+	
+	//값과 자료형 모두 확인
+	c = a !== b;	
+	document.write('a !== b: ' + c + '<br>');
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

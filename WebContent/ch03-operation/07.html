@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>break label문</title>
+<script type="text/javascript">
+
+//레이블을 사용해서 중첩 루프를 동시에 빠져나가는 코드
+	outer_loop:
+	for(var i=0; i<5; i++){
+		for(var j=0; j<5; j++){
+			if(j==3){
+				break outer_loop;
+			}
+			document.write('i값: '+i + '\t' +'j값: ' + j+'<br>');
+		}
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
