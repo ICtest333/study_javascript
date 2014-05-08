@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>은닉화 / 캡슐화</title>
+<script type="text/javascript">
+/* 
+	function Rectangle(width, height){
+		this.width = width;
+		this.height = height;
+	}
+	
+	var rectangle = new Rectangle(6, 8);
+	
+	//속성일 경우 외부에서 접근가능
+	rectangle.width = 11;
+	rectangle.height = 22;
+	document.write(rectangle.width + ', ' + rectangle.height);
+ */	
+	
+/* 
+	function Rectangle(width, height){	 	
+		this.width = width;
+		//지역변수는 외부에서 호출 불가(은닉화)
+		var height = height;
+	}
+	
+	var rectangle = new Rectangle(6, 8);
+	
+	//속성일 경우 외부에서 접근가능
+	rectangle.width = 11;
+	//rectangle.height = 22;
+	document.write(rectangle.width + ', ' + rectangle.height);
+ */
+
+	/* 
+	function Rectangle(width, height){	 	
+		this.width = width;
+		//지역변수는 외부에서 호출 불가(은닉화)
+		var height = height;
+	}
+	
+	var rectangle = new Rectangle(6, 8);
+	
+	//속성일 경우 외부에서 접근가능
+	rectangle.width = 11;
+	//데이터 속성이 추가되어져서 보이는 것임
+	rectangle.height = 22;
+	rectangle.name = '도형';	
+	document.write(rectangle.name + '<br>');
+	document.write(rectangle.width + ', ' + rectangle.height);
+	 */
+		function Rectangle(width, height){
+			//지역변수는 외부에서 호출 불가(은닉화)
+			var width = width;		
+			var height = height;
+			this.getWidth = function(){
+				return width;
+			};
+			this.getHeight = function(){
+				return height;
+			};
+		}
+		
+		var rectangle = new Rectangle(6, 8);
+		
+		//외부에서 호출불가
+		document.write(rectangle.width + ', ' + rectangle.height + '<br>');
+		//메소드를 통해 접근
+		document.write(rectangle.getWidth() + ', ' + rectangle.getHeight())
+			 
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

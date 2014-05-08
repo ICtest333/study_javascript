@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열에 객체 저장</title>
+<script type="text/javascript">
+	//생성자 함수
+	function Student(name, korean, math, english, science){
+		//속성 지정
+		//this 전역변수로 this없으면 지역변수
+		this.name = name;
+		this.korean = korean;
+		this.math = math;
+		this.english = english;
+		this.science = science;
+		
+		//메소드 지정
+		this.getSum = function(){
+			return this.korean + this.math + this.english + this.science;
+		};
+		this.getAverage = function(){
+			return this.getSum()/4;
+		};
+		this.toString = function(){
+			return this.name + ', ' + this.getSum() + ', ' + this.getAverage();
+		};		
+	}
+	
+	var students = [];
+	students.push(new Student('홍길동', 99, 88, 55, 66));
+	students.push(new Student('일지매', 99, 77, 67, 78));
+	students.push(new Student('대장금', 45, 65, 65, 87));
+	students.push(new Student('금잔디', 99, 88, 55, 66));
+	students.push(new Student('하회탈', 99, 88, 55, 66));
+	students.push(new Student('곰탱이', 99, 80, 55, 66));
+	
+	//출력
+	var output = '이름, 총점, 평균\n';
+	for(var i in students){
+		output += students[i].toString() + '\n';
+	}
+	alert(output);
+</script>
+</head>
+<body>
+
+</body>
+</html>

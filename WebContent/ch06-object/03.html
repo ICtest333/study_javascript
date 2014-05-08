@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체의 속성과 메소드 사용</title>
+<script type="text/javascript">
+/* 
+	var person = {
+			//속성 지정
+			name:'홍길동',
+			//메소드 지정
+			//함수명:함수 선언
+			play:function(){
+				alert('놀고 있습니다.');
+			}
+	};
+	
+	//함수 정보를 가져오는 것임
+	//person.play;
+	
+	//메소드 호출
+	person.play();
+ */	
+	
+ 
+ /* 
+	var person = {
+			//속성 지정
+			name:'홍길동',
+			//메소드 지정
+			//함수명:함수 선언
+			play:function(sports){
+				alert( sports + '를 하고 있습니다.');
+			}
+	};
+	person.play('축구');
+	 */
+
+	 
+	 /* 
+	var person = {
+			//속성 지정
+			name:'홍길동',
+			//메소드 지정
+			//함수명:함수 선언
+			play:function(sports){
+				alert( name + '가' + sports + '를 하고 있습니다.');
+			}
+	};
+	person.play('축구');
+	 */
+
+	 
+/* 	 
+	 var name = "김길동";
+	 
+	 var person = {
+				//속성 지정
+				name:'홍길동',
+				//메소드 지정
+				//함수명:함수 선언
+				play:function(sports){
+					alert( name +  '이(가)  + sports + '를 하고 있습니다.');
+				}
+		};
+		person.play('축구');
+	 */ 
+	 
+/* 
+		 var name = "김길동";
+		 
+		 var person = {
+					//속성 지정
+					name:'홍길동',
+					//메소드 지정
+					//함수명:함수 선언
+					play:function(sports){
+						
+						var name = '최길동';
+						alert( name +  '이(가)  + sports + '를 하고 있습니다.');
+					}
+			};
+			person.play('축구');
+			 */
+			
+			
+			
+/* 
+			 //전역 변수
+			 var name = "김길동";
+			 
+			 var person = {
+						//속성 지정
+						name:'홍길동',
+						//메소드 지정
+						//함수명:함수 선언
+						play:function(sports){
+							//지역변수
+							var name = '최길동';
+							
+							//메소드에서 속성을 호출하고자 한다면 this를 사용해서 속성에 접근해야 함
+							//this를 붙이지 않으면 전역변수 또는 메소드의 지역변수로 인식
+							//this.name: 객체.속성
+							alert( this.name + '이(가) ' + sports + '를 하고 있습니다.');
+						}
+				};
+				person.play('축구');
+ */		 
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>은닉화 / 캡슐화</title>
+<script type="text/javascript">
+
+		function Rectangle(width, height){
+			//지역변수는 외부에서 호출 불가(은닉화)
+			var width = width;		
+			var height = height;
+			this.getWidth = function(){
+				return width;
+			};
+			this.getHeight = function(){
+				return height;
+			};
+			
+			this.setWidth = function(width){
+				//검증
+				if(width < 0){
+					alert('음수를 입력할 수 없습니다.');
+				}else{
+					width = width;
+				}
+				
+			};
+			this.setHeight = function(height){
+				//검증
+				if(height < 0){
+					alert('음수를 입력할 수 없습니다.');
+				}else{
+					height = height;
+				}
+			};
+		}
+		
+		Rectangle.prototype.getArea = function(){
+			return this.getWidth() * this.getHeight();
+		};
+		
+		var rectangle = new Rectangle(6, 8);		
+		document.write('AREA = ' + rectangle.getArea() + '<br>');
+		
+		rectangle.setWidth(-5);
+		document.write('AREA = ' + rectangle.getArea()+ '<br>');			 
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

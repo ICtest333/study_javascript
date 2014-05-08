@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>빈 객체에 속성 추가</title>
+<script type="text/javascript">
+	//빈 객체 생성
+	var student = {};
+	
+	//객체에 속성 추가
+	student.name = '홍길동';
+	student.hobby = '피아노';
+	student.specialty = '자바';
+	student.willjob = '프로그래머';
+	
+	//in 키워드를 이용해서 객체내의 속성 존재 여부 체크
+	document.write( ('specialty' in student) + '<br>');
+	document.write(student.specialty + '<br>');
+	
+	
+	document.write('<br>====================================<br>');
+	var output ='';
+	for(var key in student){
+		output += key + ' : ' + student[key] + '<br>';
+	}
+	document.write(output);
+	
+	
+	document.write('<br>====================================<br>');
+	//객체 명 출력
+	document.write(student + '<br>');
+	document.write(student.toString()+ '<br>');
+	
+	
+	/*  
+	document.write('<br>====================================<br>');
+	//객체의 메소드 추가
+	student.toString = function(){	//속성의 명세 호출하기
+		var msg = '';
+		for(var key in this){	//this: 객체 안에서 객체 참조
+			msg += key + ' : ' + this[key] + '<br>';
+		}
+		return msg;
+	};
+	//출력
+	document.write(student.toString() + '<br>');
+	  */
+	  
+	 
+	/* 
+	document.write('<br>====================================<br>');
+	//객체의 메소드 추가
+	student.toString = function(){	//속성의 명세 호출하기
+		var msg = '';
+	
+		for(var key in this){	//this: 객체 안에서 객체 참조
+			if(key!='toString'){
+				msg += key + ' : ' + this[key] + '<br>';	
+			}
+			
+		}
+		return msg;
+	};
+	//출력
+	document.write(student.toString() + '<br>');
+	  */
+	
+	
+	 
+	 document.write('<br>====================================<br>');
+		//객체의 메소드 추가
+		student.toString = function(){	//속성의 명세 호출하기
+			var msg = '';
+		
+			for(var key in this){	//this: 객체 안에서 객체 참조
+				if(key!='toString'){
+					msg += key + ' : ' + this[key] + '<br>';	
+				}				
+			}
+			return msg;
+		};
+		//출력
+		document.write(student.toString() + '<br>');
+		document.write('<br>====================================<br>');
+		document.write(student + '<br>');
+		
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

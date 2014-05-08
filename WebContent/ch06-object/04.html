@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체의 활용</title>
+<script type="text/javascript">
+	var student = {
+			name:'홍길동',
+			korean:90,
+			math:99,
+			english:88,
+			science:95
+	};
+
+	//출력용 변수
+	var output = '';
+	output += '이름: ' + student.name + '\n';
+	output += '국어: ' + student.korean + '\n';
+	output += '수학: ' + student.math + '\n';
+	output += '영어: ' + student.english + '\n';
+	output += '과학: ' + student.science+ '\n';
+	output += '총점: ' +  (student.korean + student.math + student.english + student.science) + '\n';
+	output += '평균: ' + (student.korean + student.math + student.english + student.science)/4 + '\n';
+	
+	alert(output);
+</script>
+</head>
+<body>
+
+</body>
+</html>

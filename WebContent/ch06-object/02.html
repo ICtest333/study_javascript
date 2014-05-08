@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체의 속성을 반복문을 이용해 호출</title>
+<script type="text/javascript">
+//객체 생성
+	var product = {
+		//속성(key:value)
+		name:'eclipse',
+		price:'3,000,000',
+		languge:'engish',
+		supportOS:'Linux',
+		subscription:true
+	};
+	
+	//출력용 변수
+	var output ='';
+	
+	//for in 반복문
+	for(var key in product){
+		//product.key: key라는 이름의 key를 호출하는 것이기 때문에 에러
+		//for in 반복문은 product.key는 인정되지 않음
+		//output += '*' + key + ' : '+  product.key + '\n';
+		output += '*' + key + ' : '+ product[key] + '\n';
+	}
+	
+	alert(output);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

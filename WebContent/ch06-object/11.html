@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프로토타입을 사용한 메소드 생성</title>
+<script type="text/javascript">
+	function Student(name, korean, math, english, science){
+		this.name = name;
+		this.korean = korean;
+		this.math = math;
+		this.english = english;
+		this.science = science;
+	}
+	
+	//프로토타입은 생성자 함수를 사용해 생성된 객체가 공통으로 가지는 공간
+	//prototype영역 호출
+	//메모리 영역의 효율성 증가
+	Student.prototype.getSum = function(){
+		return this.korean + this.math + this.english + this.science;
+	};
+	Student.prototype.getAverage = function(){
+		return this.getSum()/4;
+	};
+	Student.prototype.toString = function(){
+		return this.name + ', ' + this.getSum() + ', ' + this.getAverage();
+	};
+	
+	
+	var students = [];
+	students.push(new Student('홍길동', 99, 88, 55, 66));
+	students.push(new Student('일지매', 99, 77, 67, 78));
+	students.push(new Student('대장금', 45, 65, 65, 87));
+	students.push(new Student('금잔디', 99, 88, 55, 66));
+	students.push(new Student('하회탈', 99, 88, 55, 66));
+	students.push(new Student('곰탱이', 99, 80, 55, 66));
+	
+	//출력
+	var output = '이름, 총점, 평균\n';
+	for(var i in students){
+		output += students[i].toString() + '\n';
+	}
+	alert(output);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>try~catch</title>
+<script type="text/javascript">
+
+		function Rectangle(width, height){
+			var width = width;		
+			var height = height;
+			this.getWidth = function(){
+				return width;
+			};
+			this.getHeight = function(){
+				return height;
+			};
+			
+			this.setWidth = function(width){
+				if(width < 0){					
+					try{
+						throw '길이는 음수일 수 없습니다';	
+					}catch(exception){
+						console.log(exception);
+						alert('음수를 입력할 수 없습니다.');
+					}					
+				}else{
+					width = width;
+				}
+				
+			};
+			this.setHeight = function(height){
+				//검증
+				if(height < 0){
+					try{
+						throw '높이는 음수일 수 없습니다';	
+					}catch(exception){
+						//콘솔에 로그 표시
+						console.log(exception);
+						alert('음수를 입력할 수 없습니다.');
+					}
+				}else{
+					height = height;
+				}
+			};
+		}
+		
+		Rectangle.prototype.getArea = function(){
+			return this.getWidth() * this.getHeight();
+		};
+		
+		var rectangle = new Rectangle(6, 8);		
+		document.write('AREA = ' + rectangle.getArea() + '<br>');
+		
+		rectangle.setWidth(-5);
+		document.write('AREA = ' + rectangle.getArea()+ '<br>');
+			 
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>
