@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명 함수 형태의 내부 함수</title>
+<script type="text/javascript">
+	function f(){
+		//익명함수 형태의 내부 함수
+		return function(){
+			document.write('Hello World!!!');
+		};		
+	}
+	
+	//함수 호출
+	f();
+	//내부 함수를 호출한 것인지 반환값을 받는 것 아니여서 표시가 되지 않음
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

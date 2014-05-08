@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 요소의 정렬</title>
+<script type="text/javascript">
+	
+	document.write('문자열 정렬 ==================<br>');
+	var array = ['배구', '축구', '야구', '족구', '스커시'];
+	//사전 순으로 정렬
+	array.sort();	
+	//출력
+	document.write(array + '<br>');
+
+	document.write('<br>');
+	//역순 정렬시 : 사전순 정렬 -> 역순 정렬
+	//현재 정렬의 반대로 정렬
+	array.sort();
+	array.reverse();
+	document.write(array + '<br>');
+	
+	
+	document.write('<br>숫자 정렬 ==================<br>');
+	var array2 = [65, 456, 124, 23, 45, 345, 13];
+	//숫자를 문자열로 인식해서 앞자리 숫자만 보고 정렬하게 됨
+	array2.sort();
+	document.write(array2 + '<br>');
+	
+	document.write('<br>');
+	//left, right를 비교해서 작은 숫자를 앞으로 보냄
+	array2.sort(function(left, right){
+		return left - right;
+	});
+	document.write(array2 + '<br>');
+	
+	//(중요)
+	//역순 정렬 방법1: reserse()로 역순 정렬시 두단계 수행
+	//1)array2.sort(function(left, right){	return left - right;	});
+	//2)array2.reverse();
+	document.write('<br>');
+	array2.reverse();
+	document.write(array2 + '<br>');
+	
+	document.write('<br>');
+	//역순 정렬 방법2: sort()
+	array2.sort(function(left, right){
+		return right - left;
+	})
+	document.write(array2 + '<br>');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

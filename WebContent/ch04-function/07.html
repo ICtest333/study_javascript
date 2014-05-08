@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내부 함수</title>
+<script type="text/javascript">
+	function f(){
+		function g(){
+			document.write('g() is called');
+		}
+		//내부 함수 호출
+		g();
+	}
+	//함수 호출
+	f();
+	//f1()만 호출되고 g1()은 호출되지 않음
+	//내부에서 g1()함수를 호출해 주어야 함.
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+<script type="text/javascript">
+				// 0	1		2		3		4
+	var array = ['사과', '배', '복숭아', '수박', '파인애플'];
+	
+	//내부 명세 보기
+	document.write(array + '<br>');
+	
+	document.write('<br>');
+	//index를 통해 데이터 접근
+	document.write(array[2] + '<br>');
+
+	
+	//출력용 변수
+	var output ='';
+	//반복문을 이용하여 출력
+	for(var i=0; i<array.length; i++){
+		output += i + ' : ' + array[i] + '\n';
+		
+	}
+	alert(output);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

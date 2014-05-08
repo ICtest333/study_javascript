@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>isFinite함수 / isNaN 함수</title>
+<script type="text/javascript">
+	
+	document.write('<br>0으로 나누기 ===============<br>');
+	//Infinity로 출력됨
+	var number1 = 10/0;
+	document.write('number1 = ' + number1 + '<br>');	
+	if(isFinite(number1)){	//0으로 나누지 않았음
+		document.write('유한<br>');
+	}else{	//0으로 나눔
+		document.write('무한<br>');
+	}
+	
+	
+	document.write('<br>문자로 나누기 ===============<br>');
+	//NaN로 출력됨
+	var number2 = 10/'A';
+	document.write('number2 = ' + number2 + '<br>');	
+	if(isNaN(number2)){	//숫자가 아닌 경우
+		document.write('숫자 아님<br>');
+	}else{	//숫자인 경우
+		document.write('숫자 임<br>');
+	}
+	
+	
+	document.write('<br>======== isFinite함수 / isNaN 함수 사용시 주의=======<br>');
+	document.write('<br>number1 == Infinity ======<br>');	
+	if(number1 == Infinity){
+		document.write('무한<br>');		
+	}else{
+		document.write('유한<br>');	
+	}
+	
+	
+	document.write('<br>number3 == -Infinity ======<br>');	
+	//-Infinity 반환
+	var number3 = -10/0;
+	document.write('number3  = ' + number3 + '<br>');
+	if(number3 == -Infinity){
+		document.write('무한<br>');		
+	}else{
+		document.write('유한<br>');	
+	}
+	
+	document.write('<br>number2==NaN ======<br>');	
+	//항상 false를 반환하기 때문에 isNaN()을 사용해야 정상적인 결과를 얻을 수 있음
+	if(number2==NaN){	//숫자가 아닌 경우
+		document.write('숫자 아님<br>');
+	}else{	//숫자인 경우
+		document.write('숫자 임<br>');
+	}
+	
+	
+</script>	
+</head>
+<body>
+
+</body>
+</html>

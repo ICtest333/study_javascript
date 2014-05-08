@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명 함수 형태의 내부 함수</title>
+<script type="text/javascript">
+	/* function f(){
+		//익명함수 형태의 내부 함수
+		return function(){
+			document.write('Hello World!!!');
+		};		
+	}
+	
+	//함수 호출
+	f();
+	//내부 함수를 호출한 것인지 반환값을 받는 것 아니여서 표시가 되지 않음 */
+	
+	
+	function f(){
+		//익명함수 형태의 내부 함수
+		return function(){
+			document.write('Hello World!!!');
+		};		
+	}
+	
+	//함수 호출
+	//f()를 구동시킨 결과인 내부함수가 a에 전달
+	var result = f();
+	//var result = function(){ document.write('Hello World!!!'); };	//동일한 결과
+	
+	//내부 함수 실행
+	result();
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

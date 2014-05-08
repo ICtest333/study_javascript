@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내부함수와 지역변수</title>
+<script type="text/javascript">
+	function f(){
+		//지역 변수
+		var n = 100;
+		function g(){
+			document.write('n=' + n + '<br>');
+			document.write('g() is called');
+		}
+		//선언적 함수 반환 (내부 함수 정보 반환)
+		return g;
+	}	
+	
+	//f()를 실행시켜 내부함수를 반환받음
+	var result = f();
+	//내부 함수 정보 출력
+	document.write('내부 함수 정보 출력 ==========<br>');
+	document.write(result + '<br>');
+	
+	
+	document.write('<br>내부 함수 실행 ==========<br>');
+	/* 클로저: 내부 함수 사용시 지역변수를 남겨두는 것 
+		지역변수는 함수가 실행될 때 생성되고 함수가종료될 때 사라지는데
+		내부함수를 만들고 내부함수를 감싸고 있는 함수의 지역변수를 내부함에서 호출할 때
+		내부부함수를 감싸고 있는 함수가 종료되었지만 
+		내부함수에서지역변수를 호출할 수 있도록 지역변수를 남겨두는 현상 */		
+	
+	//내부 함수 실행
+	result();
+	
+	
+	document.write('<br>');
+	document.write('<br>호출함수 실행한 후 바로 내부 함수 실행 ==========<br>');
+	//f()실행한 후 바로 g()함수(내부 함수)호출
+	//변수에 저장하지 않고 내부 함수 바로 출력
+	//f()실행한후 반환되는 내부함수 호출
+	f()();
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

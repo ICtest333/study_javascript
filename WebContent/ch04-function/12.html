@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자열을 실행코드로 변환</title>
+<script type="text/javascript">
+
+/* eval(String)	: string을 자바스크립트 실행 코드로 변환 */
+
+	//자바실행코드가 아니라 문자열
+	var willbeEval = '';
+	willbeEval += 'var number = 7;';
+	willbeEval += 'alert(number);';
+	
+	//eval(): 문자열 -> 실행코드
+	eval(willbeEval);
+	
+	alert(number + ' : 문자열 -> 실행코드된 number호출');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
